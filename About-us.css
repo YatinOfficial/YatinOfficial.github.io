@@ -1,36 +1,43 @@
 body{
     margin: 0px;
     padding:0px;
-    font-family: sans-serif;
 }
 
 header{
     margin: 0 auto;
     display: grid;
     grid-template-columns: 30% auto;
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: #2d3436;
+	background-image: linear-gradient(215deg, #2d3436 25%, #000000 74%);
+	opacity: 0.9;
 }
+
+.logo{
+	margin-left:15%;
+	margin-top: -10px;
+}
+
+
 nav{
-    margin-right: 10px;
+    margin-left: 0px;
 }
 
 nav ul{
-    margin: 30px 0px 0px 10px;
+    margin: 30px 0px 0px 50px;
 }
 
 nav ul li{
     display: inline;
     list-style-type: none;
-    padding:20px 10px;
+    padding:20px 20px;
 }
 
 nav ul li a{
     text-decoration: none;
-    font-weight: bold; 
-    color:#98AD6A;  
-    font-size:1.25vw;
-    
+    color:white;    
+    font-size: 1.10vw;
+	font-family: 'Noto Sans';
+	display:inline-block;
 }
 
 nav ul li.active,
@@ -79,12 +86,16 @@ nav ul li.active a{
      .logo{
         grid-column: 1/5;
         text-align: center;
+		margin:-25px 0 0 0;
     }
+	
+    
     
     nav{
         grid-column: 1/5;
         text-align: center;
         padding: 20px 10px;
+        position:sticky;
     }
     
     nav ul{
@@ -105,6 +116,7 @@ nav ul li.active a{
         background-color: #98AD6A;
         
     }
+}
     
 /*---------Mobile View -------*/
     
@@ -114,6 +126,7 @@ nav ul li.active a{
     .logo{
         grid-column: 1/2;
         text-align: left;
+		margin-left: 15%;
     }
     
     .wrapper{
@@ -127,7 +140,7 @@ nav ul li.active a{
     
     nav{
         grid-column: 1/5;
-        text-align: centre;
+        text-align: left;
         display: none;
     }
     
@@ -138,8 +151,8 @@ nav ul li.active a{
     }
     
     nav ul li a{
-        color:#98AD6A;
-        min-width:100%
+        font-weight:none;
+		display: block;
     }
     
     nav ul li.active,
@@ -148,20 +161,18 @@ nav ul li.active a{
         background-color: #98AD6A;
     }
     
-    nav ul li a.active,
-    nav ul li a:hover{
-        color:white;
-    }
+   
     
     .menu-toggle{
         display: inline-block;
         height: 20px;
-        margin: 20px 0px 20px 20px;
+        margin: 10px 10px 20px 10px;
         padding: 5px 5px;
-        color:black;
+        color:white;
         font-size: 35px;
         grid-column: 4/5;
         text-align: right;
         
     }
+    
     }

@@ -1,7 +1,6 @@
 body{
     margin: 0px;
     padding:0px;
-    font-family: sans-serif;
 }
 
 header{
@@ -19,7 +18,7 @@ header{
 }
 
 nav{
-    margin-right: 10px;
+    margin-left: 0px;
 }
 
 nav ul{
@@ -311,6 +310,7 @@ nav ul li.active a{
     background-color: #3B3D3E;
     position:sticky;
         top:58px;
+		opacity:0.9;
 }
 
 .intra-menu ul{

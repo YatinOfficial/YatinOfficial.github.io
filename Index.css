@@ -312,12 +312,38 @@ nav ul li:hover{
 
 /* tablet view */
 @media screen and (max-width:950px){
-    .logo{
+   .logo{
         grid-column: 1/5;
         text-align: center;
 		margin:-25px 0 0 0;
-		
-		
+    }
+	
+    
+    
+    nav{
+        grid-column: 1/5;
+        text-align: center;
+        padding: 20px 10px;
+        position:sticky;
+    }
+    
+    nav ul{
+    margin: 0px;
+        height:100%;
+    }
+    
+    nav ul li a{
+        font-weight: bold;
+        font-size:11px;
+        
+    }
+    
+    nav ul li.active,
+    nav ul li:hover,
+    nav ul li:hover a,
+    nav ul li.active a{
+        background-color: #98AD6A;
+        
     }
     
     
@@ -326,35 +352,12 @@ nav ul li:hover{
     background-repeat: no-repeat;    
     background-size: 100% 100%;
     object-fit: cover;
-    min-height: 750px;
+    min-height: 450px;
     max-width:100%;
-	margin-top: -120px;
+	margin-top:0px;
 }
     
-    nav{
-        grid-column: 1/5;
-        text-align: center;
-        padding: 5px 10px;
-		margin-top: 15px;
-    }
     
-    nav ul{
-    margin: 0px;
-
-    }
-    
-    nav ul li a{
-        color:white;
-		font-size: 1.75vw;
-        padding-top:45px;
-    }
-    
-    nav ul li.active,
-    nav ul li:hover{
-        background-color: #98AD6A;
-		padding-top: 5px ;
-		padding-bottom: 5px;
-    }
     .flex{
         min-height: 400px;
         align-content: flex-end;
@@ -564,20 +567,12 @@ nav ul li:hover{
 /*mobile view*/
 @media screen and (max-width:714px){
     
-    .logo{
+   .logo{
         grid-column: 1/2;
         text-align: left;
 		margin-left: 15%;
     }
     
-    #wrapper{
-    background:none; 
-    background-size: 100% 100%;
-    max-height: 100%;
-    max-width:100%;
-    min-height: 300px;  
-	margin-top:0px;	
-	}
     
     nav{
         grid-column: 1/5;
@@ -588,22 +583,21 @@ nav ul li:hover{
     
     nav ul li{
         display: block;
+        padding:10px 20px;
     }
     
     nav ul li a{
-		font-size:15px;
-		font-weight:none;
+        font-weight:none;
 		display: block;
-		padding: 5px 0;
     }
     
     nav ul li.active,
     nav ul li:hover{
         color:white;
-        background-color: none;
+        background-color: #98AD6A;
     }
     
-    
+   
     
     .menu-toggle{
         display: inline-block;
@@ -616,6 +610,15 @@ nav ul li:hover{
         text-align: right;
         
     }
+	
+	#wrapper{
+    background:none; 
+    background-size: 100% 100%;
+    object-fit: cover;
+    max-height: 100%;
+    max-width:100%;
+    min-height: 300px; 
+	}
     
    
     .flex{
