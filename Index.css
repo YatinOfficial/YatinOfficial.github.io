@@ -629,6 +629,19 @@ nav ul li:hover{
         min-height: 300px;    
     }
     
+	.flex h1{
+    color:white;
+    font-family: 'Kanit';
+    font-size:45px;
+    margin:0;
+	opacity:0.9;
+	}
+	
+	.flex h3{
+		font-size:15px;
+		opacity:0.9;
+	}
+
      .below-content{
         display: grid;
         max-width: 1200px;
