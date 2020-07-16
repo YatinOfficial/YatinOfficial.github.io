@@ -1,0 +1,167 @@
+body{
+    margin: 0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+header{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 30% auto;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav{
+    margin-right: 10px;
+}
+
+nav ul{
+    margin: 30px 0px 0px 10px;
+}
+
+nav ul li{
+    display: inline;
+    list-style-type: none;
+    padding:20px 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: bold; 
+    color:#98AD6A;  
+    font-size:1.25vw;
+    
+}
+
+nav ul li.active,
+nav ul li:hover,
+nav ul li:hover a,
+nav ul li.active a{
+     background-color: #98AD6A;
+    color: white;
+}
+
+.header-image{
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(Images/Aboutus_Background.jpg);
+    min-height:300px;
+    background-repeat: no-repeat;    
+    background-size: 100% 100%;
+}
+
+.main-content{
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: justify;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-sizing: border-box; 
+    
+    font-family: "oxygen";
+}
+
+.copyright{
+    font-family: oxygen;
+    font-size:16px; 
+    padding:15px 20px 0px 0px;
+    text-align: right;
+    background-color: black;
+    color:white;
+    height: 30px;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+/*-- Tablet view --*/
+
+@media screen and (max-width:950px){
+     .logo{
+        grid-column: 1/5;
+        text-align: center;
+    }
+    
+    nav{
+        grid-column: 1/5;
+        text-align: center;
+        padding: 20px 10px;
+    }
+    
+    nav ul{
+    margin: 0px;
+        height:100%;
+    }
+    
+    nav ul li a{
+        font-weight: bold;
+        font-size:11px;
+        
+    }
+    
+    nav ul li.active,
+    nav ul li:hover,
+    nav ul li:hover a,
+    nav ul li.active a{
+        background-color: #98AD6A;
+        
+    }
+    
+/*---------Mobile View -------*/
+    
+/*mobile view*/
+@media screen and (max-width:714px){
+    
+    .logo{
+        grid-column: 1/2;
+        text-align: left;
+    }
+    
+    .wrapper{
+    background:none; 
+    background-size: 100% 100%;
+    object-fit: cover;
+    max-height: 100%;
+    max-width:100%;
+    min-height: 300px;    
+}
+    
+    nav{
+        grid-column: 1/5;
+        text-align: centre;
+        display: none;
+    }
+    
+    
+    nav ul li{
+        display: block;
+        padding:10px 20px;
+    }
+    
+    nav ul li a{
+        color:#98AD6A;
+        min-width:100%
+    }
+    
+    nav ul li.active,
+    nav ul li:hover{
+        color:white;
+        background-color: #98AD6A;
+    }
+    
+    nav ul li a.active,
+    nav ul li a:hover{
+        color:white;
+    }
+    
+    .menu-toggle{
+        display: inline-block;
+        height: 20px;
+        margin: 20px 0px 20px 20px;
+        padding: 5px 5px;
+        color:black;
+        font-size: 35px;
+        grid-column: 4/5;
+        text-align: right;
+        
+    }
+    }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Integriti</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<link rel="stylesheet" href="main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+   <div class="wrapper"> 
+    <header>
+        <div class="logo"><img src="Images/integriti copy.png"/></div>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        <nav>
+            <ul>
+                <li class="active"><a href="main.html" class="active">HOME</a></li>
+                <li><a href="About-Us.html">ABOUT US</a></li>
+                <li><a href="#">OFFICE AUTOMATION</a></li>
+                <li><a href="#">PARTNERS</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+        </nav>        
+    </header>
+    <div class="flex">
+       <h1> INTEGRITI </h1>
+       <h3>One stop for all the computer problems...</h3>
+    </div>    
+   </div>
+   
+   <!-- Below Content -->
+   <div class="below-content">
+       <div class="box-aboutus">
+           <i class="fas fa-globe-asia"></i>
+           <h3>About us</h3>
+           <p>Integriti is a professionally managed company that was established in 2001.
+            We have been providing sales and service in Computer Hardware and Networking Business for more than 10 years now.<br></p>
+            <a href="About-Us.html">Read More...</a>
+       </div>
+       
+       <div class="box-products">
+           <i class="fas fa-laptop"></i>
+           <h3>Products</h3>
+            <p>We are Thane based hardware dealer.
+            We offers Best product with best price.
+            Buy Desktops, Servers, Laptops, Printer, Scanners, Thin client and Storage devices for your Home Office, Business and Enterprise. </p>
+            <a href="#">Read More...</a>
+       </div>
+       
+       <div class="box-services">
+           <i class="fas fa-shopping-cart"></i>
+           <h3>Services</h3>
+            <p>Integriti believes in providing prompt services to clients and customers to 
+            fulfill their goals and requirement with the help of our expertise, skills, knowledge and experience.</p>
+            <a href="Services.html">Read More...</a>
+       </div>
+   </div>
+   
+   <div class="footer">
+       <footer>
+          <div class="copyright">IntegritiSystems.com &copy; 2018</div>
+       </footer>
+   </div>
+   
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".menu-toggle").click(function(){
+                $("nav").toggle();
+            });
+        });
+    </script>
+</body>

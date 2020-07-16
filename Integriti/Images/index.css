@@ -1,0 +1,134 @@
+
+html{
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+
+body{
+    background-image:url(Images/photo-of-white-wall-1484759.jpg);
+}
+
+.main-nav{
+    margin:0 auto;
+	display:grid;
+	grid-template-columns: 20% auto;
+    background-color: white;
+    border-bottom: 1px solid #EAEAEB;
+    text-align: right;
+}
+
+.burger-icon{
+	display:none;
+}
+
+
+.main-nav a{
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+    margin: 0 30px 0 0;
+}
+
+.main-nav a:hover{
+    cursor: pointer;
+    color: gray;
+}
+
+.main-nav ul li{
+    display: inline;
+    list-style-type: none;
+}
+
+.list-item{
+    margin-left: 5px;
+    text-transform: uppercase;
+    padding: 5px;
+    
+}
+
+/* Top Container */
+.top-container{
+    display: grid;
+    max-width: 1200px;
+    margin:auto;
+    grid-template-areas: 'top top';
+}
+
+.showcase{
+    grid-area: top;
+    min-height: 600px;
+    background-image: url(Images/silver-and-black-laptop-computer-1229861.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.showcase h1{
+    margin-left: 20px;
+    font-size: 4rem;
+    color: white;
+}
+
+.showcase p{
+    margin-left: 20px;
+    color: white;
+}
+
+.bottom-container{
+    display: grid;
+    grid-template-areas: 'about-us product service';
+    margin: -20px 80px 0px;
+    background-color: cornsilk;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 4;
+}
+
+.box-1{
+    grid-area: about-us;
+    background-color: white;
+    padding: 10px 10px;
+    text-align: center;
+    border-right: 1px solid #888888;
+}
+
+.box-1 p{
+    text-align: left;
+}
+
+.box-2{
+    grid-area: product;
+    background-color: white;
+    padding: 10px 10px;
+    text-align: center;
+    border-right: 1px solid #888888;
+    
+}
+
+.box-2 p{
+    text-align: left;
+}
+
+.box-3{
+    grid-area: service;
+    background-color: white;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.box-3 p{
+    text-align: left;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repate(4, 1fr);
+    grid-template-areas: 'foot1 foot2 foot3 foot4';
+    color:white;
+    background-color: black;
+    
+}
