@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     padding:0px;
+	font-family: Sen, sans-serif;
 }
 
 header{
@@ -36,7 +37,7 @@ nav ul li a{
     text-decoration: none;
     color:white;    
     font-size: 1.10vw;
-	font-family: 'Noto Sans';
+	font-family: Sen, sans-serif;
 	display:inline-block;
 }
 
@@ -63,11 +64,11 @@ nav ul li.active a{
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     box-sizing: border-box; 
     
-    font-family: "oxygen";
+    font-family: Sen, sans-serif;
 }
 
 .copyright{
-    font-family: oxygen;
+    font-family: Sen, sans-serif;
     font-size:16px; 
     padding:15px 20px 0px 0px;
     text-align: right;
