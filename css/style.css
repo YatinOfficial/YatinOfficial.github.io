@@ -809,8 +809,7 @@ hr.dottad_border {
 }
 
 .loader_animation {
-	animation-name: rotatey;
-	animation-duration: 2s;
+	animation-duration: 5s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 	-webkit-animation-name: rotatey;
@@ -831,31 +830,7 @@ hr.dottad_border {
 	-o-animation-timing-function: linear;
 }
 
-@-webkit-keyframes rotatey {
-	from {
-		-webkit-transform: rotatey(0deg);
-		-moz-transform: rotatey(0deg);
-		-ms-transform: rotatey(0deg);
-		-o-transform: rotatey(0deg);
-		transform: rotatey(0deg);
-	}
-	to {
-		-webkit-transform: rotatey(360deg);
-		-moz-transform: rotatey(360deg);
-		-ms-transform: rotatey(360deg);
-		-o-transform: rotatey(360deg);
-		transform: rotatey(360deg);
-	}
-}
 
-@-moz-keyframes rotatey {
-	from {
-		-moz-transform: rotatey(0deg);
-	}
-	to {
-		-moz-transform: rotatey(360deg);
-	}
-}
 
 .full_layout_without_container {
 	padding: 80px 15px 50px;
