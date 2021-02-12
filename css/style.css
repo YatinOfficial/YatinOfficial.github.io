@@ -1794,6 +1794,7 @@ section.dottad_star_bg {
 .testimonial-container {
 	position: relative;
 	padding-left: 180px;
+    height:360px;
 }
 
 .testimonial-container .testimonial-photo {
@@ -3184,6 +3185,7 @@ span.skill {
 	background-image: url('../images/it_service/test_bg.png');
 	background-size: cover;
 	padding-bottom: 185px;
+    height:800px;
 }
 
 .cleaning .testmonial_section {

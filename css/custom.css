@@ -20,3 +20,9 @@ ul.RHI-testimonial{
     list-style-type: circle;
     
 }
+
+@media (max-width: 767px) {
+    .testimonial-content{
+        font-size: .8em;
+    }
+}
