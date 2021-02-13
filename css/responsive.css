@@ -160,6 +160,21 @@
       padding-bottom: 25px;
   }
 	
+    .testimonial-container{
+        max-width:800px;
+    }
+    
+    #testimonial_slider{
+        width:800px;
+    }
+    
+    #testimonial_slider .carousel-indicators{
+        bottom: 75px;
+    }
+    
+    .testmonial_section{
+        max-height: 700px;
+    }
 }
 
 
@@ -463,6 +478,9 @@
 		position: relative;
 		top: 70px;
 	}
+    .testimonial-container{
+        max-width:900px;
+    }
 	/**== parallax slider ==**/
 	#pallax_slider img {
 		width: 100%;
@@ -589,6 +607,7 @@
 	.responsive_center button {
 		float: right;
 	}
+    
 	/**== accordian ==**/
 	#accordion .panel.panel-default .panel-heading {
 		float: left;
@@ -752,7 +771,21 @@
 	width: 100%;
 }
 
+    .testimonial-container{
+        max-width:600px;
+    }
+    
+    #testimonial_slider{
+        width:800px;
+    }
 
+    .testmonial_section {
+        max-height: 680px;
+    }
+    
+    #testimonial_slider .carousel-indicators{
+        bottom: 30px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -850,10 +883,14 @@
 	}
 	.testmonial_section {
         padding-bottom: 135px !important;
-        height: 550px;
+        height: 640px;
     }
 	.testimonial-meta h4 {
         margin: 5px 0;
+        font-size: 0.8em;
+    }
+    .testimonial-position{
+        font-size: 0.7em;
     }
 	#testimonial_slider .testimonial-meta {
         margin-top: 75px;  
@@ -1173,6 +1210,7 @@
        box-shadow: 0 0 50px -30px rgba(0, 0, 0, 0.5);
        width: 94%;
        margin: 0 3% 35px;
+        height: 100px;
     }
 	.left_bottom {
 		position: relative;
@@ -1286,6 +1324,10 @@
     margin-right: 15px;
     margin-top: 25px;
    }
+    
+    .testimonial-container{
+        height: 300px;
+    }
    .contact_us_section {
       padding: 40px 50px;
       margin-top: 20px;
@@ -1529,6 +1571,31 @@
 	.xs-hidden {
 	    display:none !important;
 	}
+    .testimonial-meta h4 {
+        margin: 5px 0;
+        font-size: 0.6em;
+    }
+    .testimonial-position{
+        font-size: 0.6em;
+    }
+    .testimonial-content{
+        font-size: 0.6em;
+    }
+        .testmonial_section {
+        max-height: 680px;
+    }
+    
+    #testimonial_slider .carousel-indicators{
+        bottom: -30px;
+    }
+    
+     #testimonial_slider {
+        height:345px;
+    }
+    
+    .testimonial-container{
+        height: 350px;
+    }
 	
 }
 
@@ -1761,5 +1828,8 @@ footer.footer_style_2 div.col-md-3 {
     margin-bottom: 50px;
 }
 
+    .testmonial_section {
+        max-height: 680px;
+    }
 
 }
