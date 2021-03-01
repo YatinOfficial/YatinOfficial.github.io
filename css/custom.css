@@ -33,4 +33,12 @@ ul.RHI-testimonial{
     .testimonial-content{
         font-size: .8em;
     }
+    
+    .tp-fullwidth-forcer{
+    height:400px !important;
+}
+    .fullwidthbanner-container{
+        height:400px !important;
+    }
+    
 }
