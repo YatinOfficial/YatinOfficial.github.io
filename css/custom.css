@@ -21,6 +21,14 @@ ul.RHI-testimonial{
     
 }
 
+.tp-fullwidth-forcer{
+    height:510px !important;
+}
+
+.tp-parallax-wrap{
+    top:145px !important;
+}
+
 @media (max-width: 767px) {
     .testimonial-content{
         font-size: .8em;

@@ -75,6 +75,7 @@ footer h2::after,
     background-color: #2d3436 !important;
 	background-image: linear-gradient(215deg, #2d3436 25%, #000000 74%);
 	opacity:0.6;
+    top:0px !important;
 }
 
 a.btn.main_bt,
@@ -201,5 +202,6 @@ a.btn.white_btn:hover {
 
 .tp-caption.tp-shape.tp-shapewrapper.rs-parallaxlevel-0 {
 	background-color: rgba(0, 0, 0, 0.4) !important;
+    top: -145px !important;
 }
 

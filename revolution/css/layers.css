@@ -1603,12 +1603,14 @@ website:   	http://www.themepunch.com
 	border-width:0;
 	color:rgba(255,255,255,1.00);
 	font-family:Raleway;
-	font-size:70px;
+	font-size:60px !important;
 	font-style:normal;
 	font-weight:800;
 	line-height:70px;
 	padding:10px 0;
 	text-decoration:none;
+    text-align: center;
+    
 }
 
 .tp-caption.NotGeneric-SubTitle,.NotGeneric-SubTitle
@@ -1628,6 +1630,7 @@ website:   	http://www.themepunch.com
 	padding:0;
 	text-align:left;
 	text-decoration:none;
+    line-height:200px !important;
 }
 
 .tp-caption.NotGeneric-CallToAction,.NotGeneric-CallToAction

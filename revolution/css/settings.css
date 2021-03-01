@@ -177,6 +177,7 @@ website:   	http://www.themepunch.com
 	padding:0 !important; 
 	margin:0 !important; 
 	list-style:none !important;
+    height: 510px !important;
 }
 
 .rev_slider li.tp-revslider-slidesli {
@@ -282,11 +283,13 @@ website:   	http://www.themepunch.com
 	position:relative;
 	padding:0;
 	overflow:hidden;
+    height:510px !important;
 }
 
 .fullwidthbanner-container .fullwidthabanner{
 	width:100%;
 	position:relative;
+    height:510px !important;
 }
 
 
@@ -924,7 +927,7 @@ img.tp-slider-alternative-image	{
 .caption.slidelink a div,
 .tp-caption.slidelink a div {	width:3000px; height:1500px;  background:url(../assets/coloredbg.png) repeat}
 .tp-caption.slidelink a span{	background:url(../assets/coloredbg.png) repeat}
-.tp-shape {	width:100%;height:100%;}
+.tp-shape {	width:100%;height:100%;  }
 
 
 
@@ -1185,7 +1188,7 @@ img.tp-slider-alternative-image	{
 
 .tp-tabs,
 .tp-thumbs,
-.tp-bullets						{	position:absolute; display:block; z-index:1000; top:0px; left:0px;}
+.tp-bullets						{	position:absolute; display:block; z-index:1000; top:510px !important; left:0px;}
 
 .tp-tab,
 .tp-thumb 						{	cursor: pointer; position:absolute;opacity:0.5;  box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;}
@@ -1213,7 +1216,7 @@ img.tp-slider-alternative-image	{
 .tp-bannertimer					{	background:#000; background:rgba(0,0,0,0.15); height:5px;}
 
 
-.tparrows						{	cursor:pointer; background:#000; background:rgba(0,0,0,0.5); width:40px;height:40px;position:absolute; display:block; z-index:1000; }
+.tparrows						{	cursor:pointer; background:#000; background:rgba(0,0,0,0.5); width:40px;height:40px;position:absolute; display:block; z-index:1000; top:255px !important; }
 .tparrows:hover 				{	background:#000;}
 .tparrows:before				{	font-family: "revicons"; font-size:15px; color:#fff; display:block; line-height: 40px; text-align: center;}
 .tparrows.tp-leftarrow:before	{	content: '\e824'; }
