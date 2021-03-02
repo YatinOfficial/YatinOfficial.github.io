@@ -22,7 +22,7 @@ ul.RHI-testimonial{
 }
 
 .tp-fullwidth-forcer{
-    height:510px !important;
+    max-height:510px !important;
 }
 
 .tp-parallax-wrap{
@@ -41,4 +41,7 @@ ul.RHI-testimonial{
         height:400px !important;
     }
     
+    .tp-caption.NotGeneric-Title, .NotGeneric-Title{
+        font-size: 44px !important;
+    }
 }
