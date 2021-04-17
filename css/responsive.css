@@ -169,7 +169,7 @@
     }
     
     #testimonial_slider .carousel-indicators{
-        bottom: 75px;
+        margin-bottom: 75px;
     }
     
     .testmonial_section{
@@ -563,7 +563,7 @@
 		margin-bottom: 20px;
 	}
 	.padding_layout_1 {
-		padding-top: 90px;
+		padding-top: 75px;
 		padding-bottom: 60px;
 	}
 	.main_heading {
@@ -784,7 +784,7 @@
     }
     
     #testimonial_slider .carousel-indicators{
-        bottom: 30px;
+        margin-bottom: 5%;
     }
 }
 
@@ -1579,14 +1579,14 @@
         font-size: 0.6em;
     }
     .testimonial-content{
-        font-size: 0.6em;
+        font-size: 0.8em;
     }
         .testmonial_section {
         max-height: 680px;
     }
     
     #testimonial_slider .carousel-indicators{
-        bottom: -30px;
+        margin-bottom: 5%;
     }
     
      #testimonial_slider {
@@ -1674,6 +1674,10 @@
     max-width: 100%;
     flex: 100%;
    }
+
+   .tp-revslider-mainul{
+        height: 440px !important;
+    }
    
 	
 }

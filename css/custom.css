@@ -29,19 +29,72 @@ ul.RHI-testimonial{
     top:145px !important;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px)  {
     .testimonial-content{
         font-size: .8em;
     }
     
     .tp-fullwidth-forcer{
     height:400px !important;
-}
+    }
     .fullwidthbanner-container{
         height:400px !important;
     }
     
     .tp-caption.NotGeneric-Title, .NotGeneric-Title{
         font-size: 40px !important;
+    }
+    
+    .tp-revslider-slidesli, .tp-revslider-mainu{
+        min-height: 440px !important;
+    }
+    
+    .tp-revslider-slidesli,
+.tp-revslider-mainul	{	
+	padding:0 !important; 
+	margin:0 !important; 
+	list-style:none !important;
+    height: 470px !important;
+}
+
+}
+
+@media (max-width:574px)  {
+    .tp-caption.tp-shape.tp-shapewrapper.rs-parallaxlevel-0 {
+        top:-145px !important;
+    }
+    
+    .tp-revslider-mainul {
+        height: 450px !important;
+    }
+    
+    .tp-revslider-slidesli,
+    .tp-revslider-mainul	{	
+        padding:0 !important; 
+        margin:0 !important; 
+        list-style:none !important;
+        max-height: 350px !important;
+    }
+    
+    
+}
+
+@media (min-width: 768px){
+      .tp-caption.NotGeneric-Title, .NotGeneric-Title{
+        font-size: 40px !important;
+    }
+}
+
+@media (max-width: 320px){
+    .padding_layout_1{
+        padding-top: 125px;
+    }
+    
+    #testimonial_slider .carousel-indicators{
+        margin-bottom: 35%;
+    }
+    
+    .testimonial-content{
+        font-size: 0.6em;
     }
 }
