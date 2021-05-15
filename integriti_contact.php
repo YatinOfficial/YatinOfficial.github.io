@@ -11,16 +11,16 @@ if(isset($_POST['email'] )) {
         $Message = $_POST['message'];
         $PhoneNumber = $_POST['PhoneNumber'];
 
-        $to = "yatin0988@gmail.com";
+        $to = "mahaleyatin@yahoo.com";
 
         $body = "";
 
-        $body .= "From: ".$UserName. "\r\n";
-        $body .= "Email: ".$UserEmail. "\r\n";
-        $body .= "Phone Number".$PhoneNumber. "\r\n";
-        $body .= "Message: ".$Message. "\r\n";
+        $body .= "From: ".$UserName. "\r\n\n\n";
+        $body .= "Email: ".$UserEmail. "\r\n\n\n";
+        $body .= "Phone Number: ".$PhoneNumber. "\r\n\n\n";
+        $body .= "Message: ".$Message. "\n\r\n";
 
-        mail($to,$Subject,$body);
+        mail($to,$Subject,$body,'From: mahaleyatin@yahoo.com');
         
         $message_sent = true;
     }
@@ -65,9 +65,6 @@ if(isset($_POST['email'] )) {
 
 </head>
 <body id="default_theme" class="contact_us_2">
-
-
-        
 <!-- loader -->
 <div class="bg_load"> <img class="loader_animation" src="images/loaders/loader_1.png" alt="#" /> </div>
 <!-- end loader -->
@@ -202,13 +199,13 @@ if(isset($_POST['email'] )) {
                 </div>
               </div>
             </div>
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 Map" align="center">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.900476286111!2d72.96428541473178!3d19.199548787017083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9170145f9eb%3A0xeda2972c4a73fe36!2sIntegriti%20systems!5e0!3m2!1sen!2sin!4v1595074920219!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-			</div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 Map" align="center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.900476286111!2d72.96428541473178!3d19.199548787017083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9170145f9eb%3A0xeda2972c4a73fe36!2sIntegriti%20systems!5e0!3m2!1sen!2sin!4v1595074920219!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contant_form">
               <h2 class="text_align_center">SEND MESSAGER</h2>
               <div class="form_section">
-                <form  action="integriti_contact.php" method="POST" class="form_contant" onsubmit="alert('Thanks for contacting us, we will get in touch!');">
+                <form class="form_contant" action="#" >
                   <fieldset>
                   <div class="row">
                     <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -221,12 +218,12 @@ if(isset($_POST['email'] )) {
                       <input class="field_custom" placeholder="Email adress" type="email" name="email">
                     </div>
                     <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <input class="field_custom" placeholder="Phone number" type="text" name="PhoneNumber">
+                      <input class="field_custom" placeholder="Phone number" type="text" name="Phone Number">
                     </div>
                     <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                      <textarea class="field_custom" placeholder="Messager" name="message"></textarea>
+                      <textarea class="field_custom" placeholder="Messager" name="meesage"></textarea>
                     </div>
-                    <div class="center"><button type="submit" class="btn main_bt" href="#" name="submit">SUBMIT NOW</button></div>
+                    <div class="center"><a class="btn main_bt" href="#" name="submit">SUBMIT NOW</a></div>
                   </div>
                   </fieldset>
                 </form>
@@ -430,7 +427,7 @@ if(isset($_POST['email'] )) {
               <h2>Integriti Systems</h2>
             </div>
             <p>“The computer was born to solve problems that did not exist before.”</p>
-			<p>- Bill Gates</p>
+      <p>- Bill Gates</p>
             <ul class="social_icons">
               <li class="social-icon fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
               <li class="social-icon tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -455,7 +452,7 @@ if(isset($_POST['email'] )) {
               <li><a href="integriti_server_admin.html"><i class="fa fa-angle-right"></i> Server Administrator</a></li>
               <li><a href="integriti_network_sol.html"><i class="fa fa-angle-right"></i> Network solutions</a></li>
               <li><a href="integriti_integrated_sol.html"><i class="fa fa-angle-right"></i> Integrated Solution</a></li>
-			  <li><a href="integriti_network_design.html"><i class="fa fa-angle-right"></i> Network Design</a></li>
+        <li><a href="integriti_network_design.html"><i class="fa fa-angle-right"></i> Network Design</a></li>
             </ul>
           </div>
           <div class="cntus">
@@ -475,13 +472,11 @@ if(isset($_POST['email'] )) {
                 </fieldset>
               </form>
             </div>
-		  </div>
+      </div>
       <div class="cprt">
         <p>Integriti Systems © Copyrights 2020</p>
       </div>
 </footer>
-
-
 <!-- end footer -->
 <!-- js section -->
 <script src="js/jquery.min.js"></script>
@@ -500,7 +495,7 @@ if(isset($_POST['email'] )) {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 11,
           center: {lat: 40.645037, lng: -73.880224},
-		  styles: [
+      styles: [
                {
                  elementType: 'geometry',
                  stylers: [{color: '#fefefe'}]
@@ -588,7 +583,7 @@ if(isset($_POST['email'] )) {
                  stylers: [{color: '#b1a481'}]
                }
              ]
-		});
+    });
 
         var image = 'images/it_service/location_icon_map_cont.png';
         var beachMarker = new google.maps.Marker({
@@ -613,19 +608,58 @@ if(isset($_POST['email'] )) {
             position: 'right'
         });
     </script>
-    
-    <script>
-    function checkit(){
-        $.post( "ajax/test.jsp",
-            $('#form').serialize(),
-            function( data ) {
-            if(data == "success"){
-                alert("success");
+     <!-- Submit Notification -->
+   <script>
+        $("#contactsubmit").click(function(){
+            var name= $("#name").val();
+            var email= $("#email").val();
+            var phn = $("#phonenumber").val();
+            var sub= $("#subject").val();
+            var msg= $("#message").val();
+            var phnpattern = /^\d{10}$/;
+            var emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if(name == '' || email == '' || phn == '' || sub == '' || msg == ''){
+                swal({
+                  title: "Fields Empty!",
+                  text: "Check the missing fields !",
+                  icon: "warning",
+                  button: "OK",
+                });
+                
             }
+            else if(!email.match(emailpattern)){
+                swal({
+                  title: "Invalid email address!",
+                  text: "Please provide valid email address!",
+                  icon: "warning",
+                  button: "OK",
+                });
+            }
+            else if(!phn.match(phnpattern)){
+                swal({
+                  title: "Invalid phone number!",
+                  text: "Please provide valid phone number!",
+                  icon: "warning",
+                  button: "OK",
+                });
+            }
+                        
+            else{
+            swal({
+                  title: "Email Sent!",
+                  text: "Thanks for contacting us, we'll get in touch",
+                  icon: "success",
+                  button: "Ok",}).then((refresh) => {
+                if(refresh){
+                    location.href = "integriti_contact.php";
+                }
+            });
+            }
+            
+                
         });
-    }
-</script>
-
+    </script>
     
 </body>
 </html>

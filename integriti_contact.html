@@ -142,7 +142,9 @@
                 <div class="information_bottom text_align_center">
                   <div class="icon_bottom"> <i class="fa fa-road" aria-hidden="true"></i> </div>
                   <div class="info_cont">
-                    <h4>7, Mulbery Apt</h4>
+                     <h4>7, Mulbbery Apt., </h4>
+                    <p>Opp. Kaushalya Hospital Gate No. 2,</p> 
+                    <p>Near T.M.C., Ganeshwadi, </p>
                     <p>Panchpakadi, Thane(w)</p>
                   </div>
                 </div>
@@ -575,5 +577,58 @@
             position: 'right'
         });
     </script>
+     <!-- Submit Notification -->
+   <script>
+        $("#contactsubmit").click(function(){
+            var name= $("#name").val();
+            var email= $("#email").val();
+            var phn = $("#phonenumber").val();
+            var sub= $("#subject").val();
+            var msg= $("#message").val();
+            var phnpattern = /^\d{10}$/;
+            var emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if(name == '' || email == '' || phn == '' || sub == '' || msg == ''){
+                swal({
+                  title: "Fields Empty!",
+                  text: "Check the missing fields !",
+                  icon: "warning",
+                  button: "OK",
+                });
+                
+            }
+            else if(!email.match(emailpattern)){
+                swal({
+                  title: "Invalid email address!",
+                  text: "Please provide valid email address!",
+                  icon: "warning",
+                  button: "OK",
+                });
+            }
+            else if(!phn.match(phnpattern)){
+                swal({
+                  title: "Invalid phone number!",
+                  text: "Please provide valid phone number!",
+                  icon: "warning",
+                  button: "OK",
+                });
+            }
+                        
+            else{
+            swal({
+                  title: "Email Sent!",
+                  text: "Thanks for contacting us, we'll get in touch",
+                  icon: "success",
+                  button: "Ok",}).then((refresh) => {
+                if(refresh){
+                    location.href = "integriti_contact.php";
+                }
+            });
+            }
+            
+                
+        });
+    </script>
+    
 </body>
 </html>
