@@ -3272,12 +3272,31 @@ footer h4 {
 .footer_style_2 {
 	padding: 0;
 	background: #111;
+    display: -ms-grid;
 	display:grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
 	grid-template-columns:repeat(4,1fr);
     grid-template-areas: "proverb srvcs addlinks cntus";
     grid-gap: 5px; 
 }
 
+.proverb{
+    -ms-grid-row: 1;
+    -ms-grid-column:1;
+}
+
+.srvcs{
+    -ms-grid-row: 1;
+    -ms-grid-column:2;
+}
+.addlinks{
+    -ms-grid-row: 1;
+    -ms-grid-column:3;
+}
+.cntus{
+    -ms-grid-row: 1;
+    -ms-grid-column:4;
+}
 .proverb{
 	grid-area:proverb;
 	padding:30px 30px;

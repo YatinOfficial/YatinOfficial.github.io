@@ -1,3 +1,41 @@
+<?php
+
+$message_sent = false;
+
+    if(isset($_POST['email'] )) {
+
+        if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $UserName = $_POST['name'];
+            $UserEmail = $_POST['email'];
+            $Sub = $_POST['subject'];
+            $Message = $_POST['message'];
+            $PhoneNumber = $_POST['PhoneNumber'];
+
+
+            $to = 'sales@integritisystem.com';
+            $from = "sales@integritisystem.com";
+            $Subject = "Enquiry mail from ".$UserName." - ".$Sub;
+
+            $body = "";
+
+            $body .= "From: ".$UserName. "\r\n\n";
+            $body .= "Email: ".$UserEmail. "\r\n\n";
+            $body .= "Phone Number: ".$PhoneNumber. "\r\n\n";
+            $body .= "Message: ".$Message. "\n\r\n";
+
+
+            $headers = "From:".$from;     
+
+            //mail($to,$Subject,$body,$headers);
+
+            $message_sent = true;
+        }
+    }
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +46,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>Integriti | Services - Data Backup</title>
+<title>Integriti | Contact Us</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
 <!-- site icons -->
 <link rel="icon" href="images/fevicon/fevicon.png" type="image/gif" />
 <!-- bootstrap css -->
@@ -26,9 +66,14 @@
 <link rel="stylesheet" href="css/custom.css" />
 <!-- wow Animation css -->
 <link rel="stylesheet" href="css/animate.css" />
+<!-- zoom effect -->
+<link rel='stylesheet' href='css/hizoom.css'>
+<!-- end zoom effect -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 
 </head>
-<body id="default_theme" class="it_service service_detail">
+<body id="default_theme" class="contact_us_2">
 <!-- loader -->
 <div class="bg_load"> <img class="loader_animation" src="images/loaders/loader_1.png" alt="#" /> </div>
 <!-- end loader -->
@@ -42,7 +87,7 @@
           <div class="full">
             <div class="topbar-left">
               <ul class="list-inline">
-                <li> <span class="topbar-label"><i class="fa  fa-home"></i></span> <span class="topbar-hightlight">7, Mulbery Apt., Panchpakadi, Thane(w)</span> </li>
+                <li> <span class="topbar-label"><i class="fa  fa-home"></i></span> <span class="topbar-hightlight"> 7, Mulbbery Apt., Panchpakadi, Thane(w)</span> </li>
                 <li> <span class="topbar-label"><i class="fa fa-envelope-o"></i></span> <span class="topbar-hightlight"><a href="mailto:sales@integritisystem.com">sales@integritisystem.com</a></span> </li>
               </ul>
             </div>
@@ -83,8 +128,8 @@
               <ul class="first-ul">
                 <li> <a href="index.html">Home</a></li>
                 <li><a href="integriti_about.html">About Us</a></li>
-                <li> <a class="active" href="integriti_service_list.html">Services</a></li>
-                <li> <a href="integriti_contact.php">Contact</a></li>
+                <li> <a href="integriti_service_list.html">Services</a></li>
+                <li> <a class="active" href="integriti_contact.php">Contact</a></li>
               </ul>
             </div>
             <div class="search_icon">
@@ -109,11 +154,10 @@
         <div class="full">
           <div class="title-holder">
             <div class="title-holder-cell text-left">
-              <h1 class="page-title">Data Backup Management</h1>
+              <h1 class="page-title">Contact</h1>
               <ol class="breadcrumb">
                 <li><a href="index.html">Home</a></li>
-				<li><a href="integriti_service_list.html">Services</a></li>
-                <li class="active">Data Backup Management</li>
+                <li class="active">Contact</li>
               </ol>
             </div>
           </div>
@@ -123,57 +167,78 @@
   </div>
 </div>
 <!-- end inner page banner -->
-<!-- section -->
-<div class="section padding_layout_1 service_list">
+<div class="section padding_layout_1">
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
+      <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12"></div>
+      <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
         <div class="row">
-          <div class="col-md-12 service_blog margin_bottom_50">
-            <div class="full">
-              <div class="service_img"> <img class="img-responsive" src="images/it_service/post-01.jpg" alt="#" /> </div>
-              <div class="service_cont">
-                <h3 class="service_head">Data Backup Management</h3>
-                <p>Make sure your system has a reliable backup plan. Backup is not a product, it is a process. It’s just that we realize only after losing it. 
-				If you need serious advice on Data Backup Solution then contact us. A powerful and flexible Data Backup software that works with your existing 
-				hardware. Integriti provides a complete backup service. Offering a cost-effective approach, data backup capabilities can assist in the rapid 
-				recovery of servers to a pre-disaster state. Our experienced team can help you to draw proper Backup and Disaster Recovery Management plan and 
-				execute them.</p>
-                <div class="bt_cont"> <a class="btn sqaure_bt" href="integriti_contact.php">Get Details</a> </div>
+          <div class="full">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="main_heading text_align_center">
+                <h2>GET IN TOUCH</h2>
               </div>
             </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="col-md-12">
-            
-          </div>
-        </div>
-        
-      </div>
-      <div class="col-md-3">
-        <div class="side_bar">
-          <div class="side_bar_blog">
-            <h4>SEARCH</h4>
-            <div class="side_bar_search">
-              <div class="input-group stylish-input-group">
-                <input class="form-control" placeholder="Search" type="text">
-                <span class="input-group-addon">
-                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                </span> </div>
+            <div class="contact_information">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 adress_cont">
+                <div class="information_bottom text_align_center">
+                  <div class="icon_bottom"> <i class="fa fa-road" aria-hidden="true"></i> </div>
+                  <div class="info_cont">
+                    <h4>7, Mulbbery Apt., </h4>
+                    <p>Opp. Kaushalya Hospital Gate No. 2,</p> 
+                    <p>Near T.M.C., Ganeshwadi, </p>
+                    <p>Panchpakadi, Thane(w)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 adress_cont">
+                <div class="information_bottom text_align_center">
+                  <div class="icon_bottom"> <i class="fa fa-user" aria-hidden="true"></i> </div>
+                  <div class="info_cont">
+                    <h4>+91 932 004 0999</h4>
+                    <p>Mon-Fri 8:30am-6:30pm</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 adress_cont">
+                <div class="information_bottom text_align_center">
+                  <div class="icon_bottom"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
+                  <div class="info_cont">
+                    <h4>support@integritisystem.com</h4>
+                    <p>24/7 online support</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="side_bar_blog">
-            <h4>OUR SERVICE</h4>
-            <div class="categary">
-              <ul>
-                <li><a href="integriti_computer_repair.html"><i class="fa fa-angle-right"></i> Computer repair</a></li>
-                <li><a href="integriti_server_admin.html"><i class="fa fa-angle-right"></i>Server Administrator </a></li>
-                <li><a href="integriti_network_sol.html"><i class="fa fa-angle-right"></i>Network Solution </a></li>
-                <li><a href="integriti_integrated_sol.html"><i class="fa fa-angle-right"></i> Integrated solutions</a></li>
-                <li><a href="integriti_network_design.html"><i class="fa fa-angle-right"></i> Network Designing</a></li>
-              </ul>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 Map" align="center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.900476286111!2d72.96428541473178!3d19.199548787017083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9170145f9eb%3A0xeda2972c4a73fe36!2sIntegriti%20systems!5e0!3m2!1sen!2sin!4v1595074920219!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contant_form">
+              <h2 class="text_align_center">SEND MESSAGER</h2>
+              <div class="form_section">
+                <form class="form_contant" name="form_contact" method="post" action="integriti_contact.php" >
+                  <fieldset>
+                  <div class="row"> 
+                    <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <input class="field_custom" placeholder="Your name" type="text" id="name" name="name">
+                    </div>
+                    <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <input class="field_custom" placeholder="Subject" type="text" id="subject" name="subject">
+                    </div>
+                    <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <input class="field_custom" placeholder="Email adress" type="email" id="email"  name="email">
+                    </div>
+                    <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <input class="field_custom" placeholder="Phone number" type="text" id="phonenumber" name="PhoneNumber">
+                    </div>
+                    <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <textarea class="field_custom" placeholder="Messager" id="message" name="message"></textarea>
+                    </div>
+                    <div class="center"><a class="btn main_bt" href="#" id="contactsubmit" name="submit">SUBMIT NOW</a></div>
+                  </div>
+                  </fieldset>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -181,7 +246,9 @@
     </div>
   </div>
 </div>
-<!-- end section -->
+<!--Map -->
+
+
 <!-- section -->
 <div class="section padding_layout_1 testmonial_section white_fonts">
   <div class="container">
@@ -320,27 +387,6 @@
   </div>
 </div>
 <!-- end section -->
-<!-- section -->
-<div class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="full">
-          <div class="contact_us_section">
-            <div class="call_icon"> <img src="images/it_service/phone_icon.png" alt="#" /> </div>
-            <div class="inner_cont">
-              <h2>REQUEST A FREE QUOTE</h2>
-              <p>Get answers and advice from people you want it from.</p>
-            </div>
-            <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="integriti_contact.php">Contact us</a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end section -->
-<!-- section -->
 <div class="section padding_layout_1" style="padding: 50px 0;">
   <div class="container">
     <div class="row">
@@ -359,6 +405,7 @@
   </div>
 </div>
 <!-- end section -->
+
 <!-- Modal -->
 <div class="modal fade" id="search_bar" role="dialog">
   <div class="modal-dialog">
@@ -391,7 +438,7 @@
               <h2>Integriti Systems</h2>
             </div>
             <p>“The computer was born to solve problems that did not exist before.”</p>
-			<p>- Bill Gates</p>
+      <p>- Bill Gates</p>
             <ul class="social_icons">
               <li class="social-icon fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
               <li class="social-icon tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -416,7 +463,7 @@
               <li><a href="integriti_server_admin.html"><i class="fa fa-angle-right"></i> Server Administrator</a></li>
               <li><a href="integriti_network_sol.html"><i class="fa fa-angle-right"></i> Network solutions</a></li>
               <li><a href="integriti_integrated_sol.html"><i class="fa fa-angle-right"></i> Integrated Solution</a></li>
-			  <li><a href="integriti_network_design.html"><i class="fa fa-angle-right"></i> Network Design</a></li>
+        <li><a href="integriti_network_design.html"><i class="fa fa-angle-right"></i> Network Design</a></li>
             </ul>
           </div>
           <div class="cntus">
@@ -436,7 +483,7 @@
                 </fieldset>
               </form>
             </div>
-		  </div>
+      </div>
       <div class="cprt">
         <p>Integriti Systems © Copyrights 2020</p>
       </div>
@@ -452,14 +499,13 @@
 <!-- custom js -->
 <script src="js/custom.js"></script>
 <script>
-
       // This example adds a marker to indicate the position of Bondi Beach in Sydney,
       // Australia.
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 11,
           center: {lat: 40.645037, lng: -73.880224},
-		  styles: [
+      styles: [
                {
                  elementType: 'geometry',
                  stylers: [{color: '#fefefe'}]
@@ -547,7 +593,7 @@
                  stylers: [{color: '#b1a481'}]
                }
              ]
-		});
+    });
 
         var image = 'images/it_service/location_icon_map_cont.png';
         var beachMarker = new google.maps.Marker({
@@ -560,5 +606,82 @@
 <!-- google map js -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
 <!-- end google map js -->
+<!-- zoom effect -->
+<script src='js/hizoom.js'></script>
+
+
+<script>
+        $('.hi1').hiZoom({
+            width: 300,
+            position: 'right'
+        });
+        $('.hi2').hiZoom({
+            width: 400,
+            position: 'right'
+        });
+    </script>
+     <!-- Submit Notification -->
+
+
+   
+    <script>
+        $("#contactsubmit").click(function(){
+            var name= $("#name").val();
+            var email= $("#email").val();
+            var phn = $("#phonenumber").val();
+            var sub= $("#subject").val();
+            var msg= $("#message").val();
+            var phnpattern = /^\d{10}$/;
+            var emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if(name == '' || email == '' || phn == '' || sub == '' || msg == ''){
+                swal({
+                  title: "Fields Empty!",
+                  text: "Check the missing fields !",
+                  icon: "warning",
+                  heightAuto: false,
+                  button: "OK",
+                });
+                
+            }
+            else if(!email.match(emailpattern)){
+                swal({
+                  title: "Invalid email address!",
+                  text: "Please provide valid email address!",
+                  icon: "warning",
+                  heightAuto: false,
+                  button: "OK",
+                });
+            }
+            else if(!phn.match(phnpattern)){
+                swal({
+                  title: "Invalid phone number!",
+                  text: "Please provide valid phone number!",
+                  icon: "warning",
+                  heightAuto: false,
+                  button: "OK",
+                });
+            }
+                        
+            else{
+                document.form_contact.submit();
+            swal({
+                  title: "Email Sent!",
+                  text: "Thanks for contacting us, we'll get in touch",
+                  icon: "success",
+                  button: "Ok",}).then((refresh) => {
+                if(refresh){
+                    location.href = "index.html";
+                }
+            });
+            }
+            
+                
+        });
+        
+    </script>
+    
+ 
+    
 </body>
 </html>

@@ -2,30 +2,35 @@
 
 $message_sent = false;
 
-if(isset($_POST['email'] )) {
+    if(isset($_POST['email'] )) {
 
-    if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-        $UserName = $_POST['name'];
-        $UserEmail = $_POST['email'];
-        $Subject = $_POST['subject'];
-        $Message = $_POST['message'];
-        $PhoneNumber = $_POST['PhoneNumber'];
+        if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $UserName = $_POST['name'];
+            $UserEmail = $_POST['email'];
+            $Sub = $_POST['subject'];
+            $Message = $_POST['message'];
+            $PhoneNumber = $_POST['PhoneNumber'];
 
-        $to = "mahaleyatin@yahoo.com";
 
-        $body = "";
+            $to = 'sales@integritisystem.com';
+            $from = "sales@integritisystem.com";
+            $Subject = "Enquiry mail from ".$UserName." - ".$Sub;
 
-        $body .= "From: ".$UserName. "\r\n\n\n";
-        $body .= "Email: ".$UserEmail. "\r\n\n\n";
-        $body .= "Phone Number: ".$PhoneNumber. "\r\n\n\n";
-        $body .= "Message: ".$Message. "\n\r\n";
+            $body = "";
 
-        mail($to,$Subject,$body,'From: mahaleyatin@yahoo.com');
-        
-        $message_sent = true;
+            $body .= "From: ".$UserName. "\r\n\n";
+            $body .= "Email: ".$UserEmail. "\r\n\n";
+            $body .= "Phone Number: ".$PhoneNumber. "\r\n\n";
+            $body .= "Message: ".$Message. "\n\r\n";
+
+
+            $headers = "From:".$from;     
+
+            #mail($to,$Subject,$body,$headers);
+
+            $message_sent = true;
+        }
     }
-}
-
 
 
 ?>
@@ -45,6 +50,8 @@ if(isset($_POST['email'] )) {
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
 <!-- site icons -->
 <link rel="icon" href="images/fevicon/fevicon.png" type="image/gif" />
 <!-- bootstrap css -->
@@ -61,10 +68,16 @@ if(isset($_POST['email'] )) {
 <link rel="stylesheet" href="css/animate.css" />
 <!-- zoom effect -->
 <link rel='stylesheet' href='css/hizoom.css'>
+<!-- custom css -->
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
 <!-- end zoom effect -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+  
+<script type="text/javascript" src="captcha.js"></script>
 
 </head>
-<body id="default_theme" class="contact_us_2">
+<body id="default_theme" class="contact_us_2" onload="ChangeCaptcha()">
 <!-- loader -->
 <div class="bg_load"> <img class="loader_animation" src="images/loaders/loader_1.png" alt="#" /> </div>
 <!-- end loader -->
@@ -78,7 +91,7 @@ if(isset($_POST['email'] )) {
           <div class="full">
             <div class="topbar-left">
               <ul class="list-inline">
-                <li> <span class="topbar-label"><i class="fa  fa-home"></i></span> <span class="topbar-hightlight">7, Mulbery Apt., Panchpakadi, Thane(w)</span> </li>
+                <li> <span class="topbar-label"><i class="fa  fa-home"></i></span> <span class="topbar-hightlight"> 7, Mulbbery Apt., Panchpakadi, Thane(w)</span> </li>
                 <li> <span class="topbar-label"><i class="fa fa-envelope-o"></i></span> <span class="topbar-hightlight"><a href="mailto:sales@integritisystem.com">sales@integritisystem.com</a></span> </li>
               </ul>
             </div>
@@ -96,7 +109,7 @@ if(isset($_POST['email'] )) {
             </div>
           </div>
           <div class="float-right">
-            <div class="make_appo"> <a class="btn white_btn" href="make_appointment.html">Make Appointment</a> </div>
+            <div class="make_appo"> <a class="btn white_btn" href="integriti_make_appointment.php">Make Appointment</a> </div>
           </div>
         </div>
       </div>
@@ -109,7 +122,7 @@ if(isset($_POST['email'] )) {
       <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
           <!-- logo start -->
-          <div class="logo"> <a href="it_home.html"><img src="images/logos/integriti.png" alt="logo" /></a> </div>
+          <div class="logo"> <a href="index.html"><img src="images/logos/integriti.png" alt="logo" /></a> </div>
           <!-- logo end -->
         </div>
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
@@ -119,8 +132,8 @@ if(isset($_POST['email'] )) {
               <ul class="first-ul">
                 <li> <a href="index.html">Home</a></li>
                 <li><a href="integriti_about.html">About Us</a></li>
-                <li> <a class="active" href="integriti_service_list.html">Services</a></li>
-                <li> <a href="it_contact.html">Contact</a></li>
+                <li> <a href="integriti_service_list.html">Services</a></li>
+                <li> <a class="active" href="integriti_contact.php">Contact</a></li>
               </ul>
             </div>
             <div class="search_icon">
@@ -175,7 +188,9 @@ if(isset($_POST['email'] )) {
                 <div class="information_bottom text_align_center">
                   <div class="icon_bottom"> <i class="fa fa-road" aria-hidden="true"></i> </div>
                   <div class="info_cont">
-                    <h4>7, Mulbery Apt</h4>
+                    <h4>7, Mulbbery Apt., </h4>
+                    <p>Opp. Kaushalya Hospital Gate No. 2,</p> 
+                    <p>Near T.M.C., Ganeshwadi, </p>
                     <p>Panchpakadi, Thane(w)</p>
                   </div>
                 </div>
@@ -205,26 +220,38 @@ if(isset($_POST['email'] )) {
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contant_form">
               <h2 class="text_align_center">SEND MESSAGER</h2>
               <div class="form_section">
-                <form class="form_contant" action="#" >
+                <form class="form_contact" name="form_contact" method="post" action="integriti_contact.php" >
                   <fieldset>
-                  <div class="row">
+                  <div class="row"> 
                     <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <input class="field_custom" placeholder="Your name" type="text" name="name">
+                      <input class="field_custom" placeholder="Your name" type="text" id="name" name="name">
                     </div>
                     <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <input class="field_custom" placeholder="Subject" type="text" name="subject">
+                      <input class="field_custom" placeholder="Subject" type="text" id="subject" name="subject">
                     </div>
                     <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <input class="field_custom" placeholder="Email adress" type="email" name="email">
+                      <input class="field_custom" placeholder="Email adress" type="email" id="email"  name="email">
                     </div>
                     <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <input class="field_custom" placeholder="Phone number" type="text" name="Phone Number">
+                      <input class="field_custom" placeholder="Phone number" type="text" id="phonenumber" name="PhoneNumber">
                     </div>
                     <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                      <textarea class="field_custom" placeholder="Messager" name="meesage"></textarea>
+                      <textarea class="field_custom" placeholder="Messager" id="message" name="message"></textarea>
                     </div>
-                    <div class="center"><a class="btn main_bt" href="#" name="submit">SUBMIT NOW</a></div>
-                  </div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                         <div class="col-md-4" text-align="right">
+                          <h5 >Enter the below Captcha: </h5> <br>
+                          </div>
+                         <div class="col-md-4">
+                          <input type="text" class="form-control" id="textinput" size="20" maxlength="6" name="textinput"> <br>
+                        </div>
+                        <div class="col-md-8">
+                          <input type="text" text-align="center" class="form-control" id="capt" name="capt" disabled>
+                        </div>
+                    </div>
+                    <div class="center"><a class="btn main_bt" href="#" id="contactsubmit" name="submit">SUBMIT NOW</a></div>
+                  
                   </fieldset>
                 </form>
               </div>
@@ -439,7 +466,7 @@ if(isset($_POST['email'] )) {
             </div>
             <ul class="footer-menu">
               <li><a href="integriti_about.html"><i class="fa fa-angle-right"></i> About us</a></li>
-              <li><a href="it_contact.html"><i class="fa fa-angle-right"></i> Contact us</a></li>
+              <li><a href="integriti_contact.php"><i class="fa fa-angle-right"></i> Contact us</a></li>
             </ul>
           </div>
           <div class="srvcs">
@@ -488,7 +515,6 @@ if(isset($_POST['email'] )) {
 <!-- custom js -->
 <script src="js/custom.js"></script>
 <script>
-
       // This example adds a marker to indicate the position of Bondi Beach in Sydney,
       // Australia.
       function initMap() {
@@ -598,6 +624,8 @@ if(isset($_POST['email'] )) {
 <!-- end google map js -->
 <!-- zoom effect -->
 <script src='js/hizoom.js'></script>
+
+
 <script>
         $('.hi1').hiZoom({
             width: 300,
@@ -609,8 +637,13 @@ if(isset($_POST['email'] )) {
         });
     </script>
      <!-- Submit Notification -->
-   <script>
+
+
+   
+    <script>
         $("#contactsubmit").click(function(){
+            
+            
             var name= $("#name").val();
             var email= $("#email").val();
             var phn = $("#phonenumber").val();
@@ -618,12 +651,15 @@ if(isset($_POST['email'] )) {
             var msg= $("#message").val();
             var phnpattern = /^\d{10}$/;
             var emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var textinput= $("#textinput").val();
+            var capt= $("#capt").val();
             
             if(name == '' || email == '' || phn == '' || sub == '' || msg == ''){
                 swal({
                   title: "Fields Empty!",
                   text: "Check the missing fields !",
                   icon: "warning",
+                  heightAuto: false,
                   button: "OK",
                 });
                 
@@ -633,6 +669,7 @@ if(isset($_POST['email'] )) {
                   title: "Invalid email address!",
                   text: "Please provide valid email address!",
                   icon: "warning",
+                  heightAuto: false,
                   button: "OK",
                 });
             }
@@ -641,25 +678,43 @@ if(isset($_POST['email'] )) {
                   title: "Invalid phone number!",
                   text: "Please provide valid phone number!",
                   icon: "warning",
+                  heightAuto: false,
                   button: "OK",
                 });
             }
-                        
+             
+            else if(!capt.match(textinput) || textinput == '') {
+                  swal({
+                  title: "Invalid Captcha!",
+                  text: "Please provide valid Captcha!",
+                  icon: "warning",
+                  heightAuto: false,
+                  button: "OK",
+                });
+            }
+                
             else{
+                document.form_contact.submit();
             swal({
                   title: "Email Sent!",
                   text: "Thanks for contacting us, we'll get in touch",
                   icon: "success",
                   button: "Ok",}).then((refresh) => {
                 if(refresh){
-                    location.href = "integriti_contact.php";
+                    location.href = "index.html";
                 }
             });
+                capt="";
             }
             
-                
-        });
+                     
+        }
+        
+            );
+        
     </script>
+    
+ 
     
 </body>
 </html>
